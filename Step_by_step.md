@@ -17,3 +17,9 @@ Comments Section------------- form for user comments
 Footer ---------------------copyright
 
 step 4: Blog ka Header + Title + Meta Info add karna.
+
+header
+
+figure
+
+table of Content
