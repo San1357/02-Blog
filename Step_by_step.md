@@ -23,3 +23,13 @@ header
 figure
 
 table of Content
+
+---
+
+Css Styling
+step 1: linking Css to Html
+
+step2:
+add reset + Base
+
+step 3:
