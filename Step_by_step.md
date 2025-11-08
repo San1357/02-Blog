@@ -33,3 +33,22 @@ step2:
 add reset + Base
 
 step 3:
+
+## add Responsiveness
+
+1: Fluid typography + comfy reading width
+2: Better section spacing + anchor jump comfort
+3: Desktop pe two-column layout (main + sidebar)
+4: Media polish: images, code, blockquotes
+
+## check
+
+Text sizes adapt across devices
+
+TOC links par jump pe section halki si highlight
+
+Desktop: main + aside side-by-side, sidebar sticky
+
+Images rounded + soft shadow
+
+Code blocks readable on mobile

@@ -111,3 +111,68 @@ footer { text-align: center; color: #777; font-size: 14px; padding: 24px 0; }
 
 /* Smooth scroll */
 html { scroll-behavior: smooth; }
+
+/* ==== Responsive type & readable width ==== */
+/*html { scroll-behavior: smooth; }*/
+
+:root{
+  --content-max: 820px;
+}
+
+body{
+  font-size: clamp(16px, 1.6vw, 18px);
+}
+
+header h1{ font-size: clamp(32px, 5vw, 44px); }
+main h2{    font-size: clamp(22px, 3vw, 30px); }
+
+/* Spacing between major blocks */
+main > section{ margin: 18px 0; }
+
+/* When user jumps via TOC, target section thoda highlight */
+:target{
+  scroll-margin-top: 12px;      /* no sticky header here, small offset is enough */
+  background: #fffef7;
+  transition: background .8s ease;
+}
+
+/* Mobile-first = stacked (already) */
+
+/* >= 980px: main + aside side-by-side */
+@media (min-width: 980px){
+  main{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 340px);   /* leave space for sidebar */
+    max-width: var(--content-max);
+  }
+  aside{
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+    margin-left: 20px;
+    position: sticky;   /* sidebar sticks while reading */
+    top: 24px;
+  }
+
+  /* Make TOC compact and sticky near top for quick nav */
+  nav[aria-label="Table of Contents"]{
+    position: sticky;
+    top: 12px;
+  }
+}
+
+/* Nicer media */
+figure img{
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+blockquote{
+  border-left-color: #d6e4ff;
+  background: #f8fbff;
+}
+
+/* Code block scroll hint on small screens */
+@media (max-width: 520px){
+  pre{ font-size: 13px; }
+}
